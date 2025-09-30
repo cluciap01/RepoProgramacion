@@ -19,7 +19,7 @@ public class Ejercicio27 {
         int num1 = numero * numero;
         int num2 = numero * numero * numero;
         
-        System.out.println("El doble de " +numero+ "es: " +num1);
+        System.out.println("El cuadrado de " +numero+ "es: " +num1);
         System.out.println("El cubo de " +numero+ "es: " +num2);
     }
     
