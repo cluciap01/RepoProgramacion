@@ -25,9 +25,7 @@ public class Ejercicio23 {
         
         double total = dinero * unidades;
         
-        System.out.println("El precio total de su compra es de: " +total+ " euros.");
-        
-        
+        System.out.println("El precio total de su compra es de: " +total+ " euros."); 
         
     }
     
