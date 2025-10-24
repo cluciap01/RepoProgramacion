@@ -12,15 +12,15 @@ public class Ejercicio16 {
         System.out.println("Los numeros impares existentes entre el numero 20 y el 160 son:");
 
         // Recorremos desde 21 hasta 159, de 2 en 2
-        for (int i = 21; i < 160; i += 2) {
-            System.out.print(i);
+        for (int i = 20; i <= 160; i ++) {
 
             // Para separar con " – " excepto el último número
-            if (i < 159) {
-                System.out.print(" - ");
+            if (i % 2 != 0) {
+                System.out.print(i);
+                contador++; // Contamos los impares
+                System.out.print(" - ");//Separamos los numeros con -
             }
 
-            contador++; // Contamos los impares
         }
         
         System.out.println(); // Salto de línea

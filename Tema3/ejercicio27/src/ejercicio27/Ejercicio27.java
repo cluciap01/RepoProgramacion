@@ -10,19 +10,18 @@ public class Ejercicio27 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
         int opcion;
-        double num1, num2;
-
+        int num1, num2;
+        Scanner entrada = new Scanner(System.in);   
         // Pedimos al usuario los dos números
         System.out.print("Introduce el primer numero: ");
-        num1 = entrada.nextDouble();
+        num1 = entrada.nextInt();
         System.out.print("Introduce el segundo numero: ");
-        num2 = entrada.nextDouble();
+        num2 = entrada.nextInt();
 
         do {
             // Mostramos el menú
-            System.out.println("\n--- MENÚ ---");
+            System.out.println("\n--- MENU ---");
             System.out.println("1.- Sumar");
             System.out.println("2.- Restar");
             System.out.println("3.- Multiplicar");
@@ -33,31 +32,30 @@ public class Ejercicio27 {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Resultado: " + (num1 + num2));
+                    System.out.println("Resultado: " + (num1 + num2)); //SUMA
                     break;
                 case 2:
-                    System.out.println("Resultado: " + (num1 - num2));
+                    System.out.println("Resultado: " + (num1 - num2)); //RESTA
                     break;
                 case 3:
-                    System.out.println("Resultado: " + (num1 * num2));
+                    System.out.println("Resultado: " + (num1 * num2)); //PRODUCTO
                     break;
                 case 4:
-                    if (num2 != 0) {
-                        System.out.println("Resultado: " + (num1 / num2));
-                    } else {
-                        System.out.println("Error: No se puede dividir entre 0.");
+                    try {
+                       System.out.println("Resultado: " + (num1 / num2)); //DIVISION
+                    }
+                    catch (ArithmeticException e) //EXCEPCION
+                    {
+                        System.out.println("No se puede dividir entre 0");
+                        System.out.println(e);
                     }
                     break;
                 case 5:
-                    System.out.println("Saliendo del programa...");
+                    System.out.println("Saliendo del programa..."); //SALIR DEL PROGRAMA
                     break;
                 default:
                     System.out.println("Opcion no valida. Intenta de nuevo.");
             }
-
         } while (opcion != 5);
-        entrada.close();
-        
     }
-    
 }
