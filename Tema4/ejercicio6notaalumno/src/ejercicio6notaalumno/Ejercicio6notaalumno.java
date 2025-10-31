@@ -1,11 +1,12 @@
-package ejercicio5notaalumno;
+package ejercicio6notaalumno;
 
 import java.util.Scanner;
+
 /**
  *
  * @author Usuario
  */
-public class Ejercicio5notaalumno {
+public class Ejercicio6notaalumno {
 
     /**
      * @param args the command line arguments
@@ -19,5 +20,5 @@ public class Ejercicio5notaalumno {
         //Llamamos a la clase de calificacion
         calificacion.notas(nota, nota, nota, nota);
     }
+    
 }
- 

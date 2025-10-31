@@ -1,11 +1,11 @@
-package ejercicio5notaalumno;
+package ejercicio6notaalumno;
 
 /**
  *
  * @author Usuario
  */
 public class calificacion {
-    public static void notas(int suspenso, int bien, int notable, int sobresaliente) {
+     public static void notas(int suspenso, int bien, int notable, int sobresaliente) {
         int nota;
         if (suspenso <= 4){
             nota = suspenso;
@@ -22,6 +22,5 @@ public class calificacion {
         } else {
             System.out.println("El numero introducido no coincide con ninguna nota");
         }
-    }
 }
- 
+}
