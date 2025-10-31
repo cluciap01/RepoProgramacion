@@ -20,3 +20,4 @@ public class Ejercicio5notaalumno {
         calificacion.notas(nota, nota, nota, nota);
     }
 }
+ 
