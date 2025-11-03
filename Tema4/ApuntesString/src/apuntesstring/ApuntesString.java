@@ -40,21 +40,10 @@ public class ApuntesString {
         }else{
             System.out.println("Son distintos");
         }
-                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+                            
     }
 
         
         
-    }
+}
 
