@@ -14,13 +14,19 @@ public class Ejercicio26esprimo {
     
     // Método que determina si un número es primo
     public static boolean esPrimo(int numero) {
-            
+        
+        if (numero < 1){
+            return false;
+        }
+        
         // Comprobamos si tiene algún divisor desde 2
-        for (int i = 2; i <= Math.sqrt(numero); i++) {
+        int i=2;
+        while(i <= Math.sqrt(numero)) {
             if (numero % i == 0) { 
             // Si el resto es 0, no es primo
                 return false;
             }
+            i++;
         }
 
         // Si no es primo
@@ -43,5 +49,3 @@ public class Ejercicio26esprimo {
 
     }
 }
-    
-
