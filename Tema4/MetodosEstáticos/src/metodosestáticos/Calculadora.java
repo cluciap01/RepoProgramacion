@@ -41,7 +41,7 @@ public class Calculadora {
     }
     
     /**
-     * 
+     *Metodo para la division 
      * @param num1
      * @param num2
      * @return 
@@ -49,4 +49,9 @@ public class Calculadora {
     public static int division(int num1 , int num2){
         return num1 / num2;
     }
-}
+    
+    public static double sqrt (double num1){
+        return Math.sqrt(num1);
+    }
+    
+    }

@@ -42,6 +42,9 @@ public class MetodosEstáticos {
         //Llamamos a la calculadora
         System.out.println(Calculadora.suma(num1 , num2));
         System.out.println(Calculadora.resta(num1 , num2));
+        System.out.println(Calculadora.multiplicacion(num1, num2));
+        System.out.println(Calculadora.division(num1, num2));
+        System.out.println(Calculadora.sqrt(num1));
        //Si queremos importar otra clase o paquete deberiamos de expecificar arriba con un import y el nombre del paquete
     }
     
