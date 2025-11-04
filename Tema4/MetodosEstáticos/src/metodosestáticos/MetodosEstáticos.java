@@ -33,6 +33,7 @@ public class MetodosEstáticos {
     public static void main(String[] args) {
        int num1 = 5;
        int num2 = 7;
+       double num3 = 3.55;
        int resultado;
        //saludo(); //Para llamar al metodo saludo
        //saludoConParametros(4); //Saludo con parametro
@@ -45,6 +46,13 @@ public class MetodosEstáticos {
         System.out.println(Calculadora.multiplicacion(num1, num2));
         System.out.println(Calculadora.division(num1, num2));
         System.out.println(Calculadora.sqrt(num1));
+        System.out.println(Calculadora.cuadrado(num1));
+        System.out.println(Calculadora.cubo(num2));
+        System.out.println(Calculadora.log(num1));
+        System.out.println(Calculadora.max(num1, num2));
+        System.out.println(Calculadora.min(num1, num2));
+        System.out.println(Calculadora.ceil(num3));
+        System.out.println(Calculadora.floor(num3));
        //Si queremos importar otra clase o paquete deberiamos de expecificar arriba con un import y el nombre del paquete
     }
     
