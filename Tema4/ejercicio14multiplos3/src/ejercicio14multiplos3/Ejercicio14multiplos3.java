@@ -30,7 +30,7 @@ public class Ejercicio14multiplos3 {
         return num;
     }
 
-    // 
+    //Metodo para mostrar multiplos
     public static void mostrarMultiplosDeTres(int limite) {
         int contador = 0;
         System.out.println("Múltiplos de 3 entre 1 y " + limite + ":");
