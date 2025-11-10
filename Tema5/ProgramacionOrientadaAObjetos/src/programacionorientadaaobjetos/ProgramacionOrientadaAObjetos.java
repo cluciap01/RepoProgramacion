@@ -32,6 +32,9 @@ public class ProgramacionOrientadaAObjetos {
         //System.out.println(tuCoche);
         //Hace los mismo que tuCoche.toString()
         System.out.println(tuCoche.getRuedas());
-    }
-    
+        
+        Bicicleta miBicicleta = new Bicicleta();
+        System.out.println("¿Cuantas bicis hemos creado?");
+
+    }    
 }
