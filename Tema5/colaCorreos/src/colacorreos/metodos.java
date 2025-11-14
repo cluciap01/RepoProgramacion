@@ -38,7 +38,7 @@ public class metodos {
             opcion = entrada.nextInt();
         } catch (InputMismatchException e) {
             System.out.println("Debe introducir un número válido.");
-            entrada.next(); // Pide de nuevo un numero del menú
+            entrada.next(); // LIMPIA BUFFER , NO PIDE AL USUARIO OTRO NUMERO
         }
         return opcion;
     }
