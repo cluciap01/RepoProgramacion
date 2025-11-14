@@ -14,6 +14,7 @@ public class Bicicleta {
     
     public static int numBicicletas = 0;
     
+    private Ciclista ciclista;
     //Constructores
     //Por defecto
     public Bicicleta(){
@@ -24,8 +25,11 @@ public class Bicicleta {
         this.estaPedaleando = false;
         //Llamamos al metodo definido incrementarNumBicletas
         incrementarNumBicletas();
+        
+        this.ciclista = new Ciclista();
 }
-    public Bicicleta(int ruedas , String manillar , String pedales , String frenos , boolean estaPedaleando){
+    
+    public Bicicleta(int ruedas , String manillar , String pedales , String frenos , boolean estaPedaleando, Ciclista ciclista){
         this.ruedas = ruedas;
         this.manillar = manillar;
         this.pedales = pedales;
@@ -33,6 +37,8 @@ public class Bicicleta {
         this.estaPedaleando = estaPedaleando;
         //Llamamos al metodo definido incrementarNumBicletas
         incrementarNumBicletas();
+        
+        this.ciclista = ciclista;
     }
     
     //Getters y setters
@@ -88,6 +94,14 @@ public class Bicicleta {
     private static void incrementarNumBicletas(){
         numBicicletas++;
     }
+    
+    public Ciclista getCiclista(){
+        return this.ciclista;
+    }
+    
+    public void setCiclista(Ciclista ciclista){
+        this.ciclista = ciclista;
+    }
     //To String
     @Override
     public String toString(){
@@ -95,7 +109,9 @@ public class Bicicleta {
                 " , un manillar " + this.manillar + 
                 " , unos pedales " + this.pedales +
                 " , unos frenos " + this.frenos +
-                " y ahora ¿estoy pedaleando? " +this.estaPedaleando;
+                " y ahora ¿estoy pedaleando? " +this.estaPedaleando+
+                
+                this.ciclista;//Tambien se puedes poner this.ciclista.toString();
     
     }
 }

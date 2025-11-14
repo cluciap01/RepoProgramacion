@@ -35,6 +35,13 @@ public class ProgramacionOrientadaAObjetos {
         
         Bicicleta miBicicleta = new Bicicleta();
         System.out.println("¿Cuantas bicis hemos creado?");
-
+        
+        Ciclista ciclista = new Ciclista("Pogacar", 1, "Líder");
+        Bicicleta biciPogacar = new Bicicleta(2, "recto", "de Carretera", "de discos", true, ciclista);
+        
+        System.out.println(biciPogacar);
+        
+        
+        
     }    
 }
