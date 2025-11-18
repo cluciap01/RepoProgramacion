@@ -10,8 +10,9 @@ public class Ejercicio23Herencias {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        vehiculos vehiculos = new vehiculos();
-        System.out.println(vehiculos);
+        // Constructor por defecto
+        //vehiculos vehiculos = new vehiculos();
+        //System.out.println(vehiculos);
         //Mostramos por pantallos los valores que va a tener nuestro TAXI 
         taxi taxi = new taxi("1234ABC", "AUDI", 90, 154);
         System.out.println(taxi);
