@@ -8,8 +8,9 @@ public class vehiculos {
     public String matricula;
     public String modelo;
     public int potenciaCV;
-
-public vehiculos(){ //Constructor por defecto
+    
+//Constructor por defecto
+public vehiculos(){ 
     this.matricula="";
     this.modelo="";
     this.potenciaCV=90;
@@ -20,7 +21,7 @@ public vehiculos(){ //Constructor por defecto
     this.modelo=modelo;
     this.potenciaCV=potenciaCV;
     }
-
+ //GETTERS Y SETTERS
 public String getMatricula(){
     return this.matricula;
 }

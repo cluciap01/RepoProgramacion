@@ -8,6 +8,7 @@ public class autobus extends vehiculos{
  
     public int numeroPlazas;
     
+    //Constructor por defecto
     public autobus(){
     super();
     this.numeroPlazas= 60;
@@ -17,7 +18,7 @@ public autobus(String matricula, String modelo , int potenciaCV , int numeroPlaz
     super(matricula, modelo , potenciaCV);
     this.numeroPlazas=numeroPlazas;
 }
-
+    //GET Y SET
 public int getNumeroPlazas(){
     return this.numeroPlazas=numeroPlazas;
 }
