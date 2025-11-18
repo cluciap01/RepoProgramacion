@@ -14,7 +14,6 @@ public class ColaCorreos {
     // VARIABLES
     public static int numeroEnvio = 1;
     public static int numeroRecogida = 1;
-
     
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
