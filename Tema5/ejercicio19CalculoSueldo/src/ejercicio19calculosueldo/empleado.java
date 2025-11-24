@@ -9,6 +9,12 @@ public class empleado {
     private double horasTrabajadas;
     private double tarifaPorHora;
 
+    // Constructor por defecto
+    public empleado() {
+        this.nombre = "";
+        this.horasTrabajadas = 0;
+        this.tarifaPorHora = 0;
+    }
     // Constructor que recibe los valores que le asignemos a los empleados
     public empleado(String nombre, double horasTrabajadas, double tarifaPorHora) {
         this.nombre = nombre;
