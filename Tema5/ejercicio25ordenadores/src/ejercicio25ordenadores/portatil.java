@@ -11,7 +11,7 @@ public class portatil extends ordenador{
 
     // Constructor por defecto
     public portatil() {
-        super(); // Llama al constructor por defecto de Ordenador [7, 14]
+        super(); // Llama al constructor por defecto de Ordenador
         this.marcaPortatil = "N/A";
         this.tamanoPantalla = 0.0;
         this.peso = 0.0;

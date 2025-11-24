@@ -5,7 +5,7 @@ package ejercicio25ordenadores;
  * @author Christian
  */
 public class ordenador {
-    // Atributos privados requeridos [1]
+    // Atributos privados requeridos
     private int cantidadMemoriaRAM;
     private int capacidadDiscoDuro;
     private String modeloProcesador;

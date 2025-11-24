@@ -51,7 +51,7 @@ private static final String[] PROCESADORES_VALIDOS = {"Intel i7", "AMD Ryzen 9",
         return disco;
     }
 
-    // Pide el precio, controlando que sea mayor que 0 [1].
+    // Pide el precio, controlando que sea mayor que 0
     public static double validarPrecio() {
         double precio;
         do {
@@ -130,8 +130,8 @@ private static final String[] PROCESADORES_VALIDOS = {"Intel i7", "AMD Ryzen 9",
         System.out.println("Introducción de Datos Específicos del Portátil " + id );
         System.out.print("Marca: ");
         String marca = entrada.nextLine();
-        double pantalla = pedirDouble("    -> Tamaño de Pantalla (pulgadas): ");
-        double peso = pedirDouble("    -> Peso (kg): ");
+        double pantalla = pedirDouble(" Tamaño de Pantalla (pulgadas): ");
+        double peso = pedirDouble(" Peso (kg): ");
 
         return new portatil( 
             (int) datosBase[0] , (int) datosBase[18], (String) datosBase[19], (String) datosBase[20], (double) datosBase[21],
@@ -157,9 +157,9 @@ private static final String[] PROCESADORES_VALIDOS = {"Intel i7", "AMD Ryzen 9",
         
         // Uso de método estático para validar y setter
         s.establecerTamanoMonitor(validarTamanoMonitor());
-        System.out.print("    -> Modelo de Teclado: ");
+        System.out.print(" Modelo de Teclado: ");
         s.establecerModeloTeclado(entrada.nextLine());
-        System.out.print("    -> Modelo de Ratón: ");
+        System.out.print(" Modelo de Ratón: ");
         s.establecerModeloRaton(entrada.nextLine());
         
         return s;
