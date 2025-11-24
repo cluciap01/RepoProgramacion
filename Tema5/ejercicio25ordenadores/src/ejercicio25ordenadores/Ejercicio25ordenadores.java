@@ -191,7 +191,7 @@ private static final String[] PROCESADORES_VALIDOS = {"Intel i7", "AMD Ryzen 9",
     }
 
     public static void main(String[] args) {
-        System.out.println("--- EJERCICIO 25: GESTIÓN DE ORDENADORES MEDIANTE HERENCIA ---\n");
+        System.out.println("EJERCICIO 25: GESTIÓN DE ORDENADORES MEDIANTE HERENCIA");
 
         // Creación de 2 objetos Servidor con constructor parametrizado
         servidor serv1 = crearServidorParametrizado(1);
