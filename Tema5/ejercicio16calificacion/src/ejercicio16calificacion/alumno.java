@@ -8,6 +8,11 @@ public class alumno {
     private String nombre;
     private int nota;
 
+    //Constructor por defecto
+    public alumno(){
+        this.nombre="";
+        this.nota=0;
+    }
     // Constructor
     public alumno(String nombre, int nota) {
         this.nombre = nombre;
