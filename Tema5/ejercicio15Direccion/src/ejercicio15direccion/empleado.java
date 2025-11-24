@@ -9,6 +9,12 @@ public class empleado {
     private int salario;
     private direccion direccion;
 
+    //Constructor por defecto
+    public empleado(){
+        this.nombre="";
+        this.salario=0;
+        this.direccion=new direccion();
+    }
     // Constructor para Empleado
     public empleado(String nombre, int salario, direccion direccion) {
         this.nombre = nombre;
