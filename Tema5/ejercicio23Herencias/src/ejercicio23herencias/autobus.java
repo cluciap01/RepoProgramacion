@@ -6,7 +6,7 @@ package ejercicio23herencias;
  */
 public class autobus extends vehiculos{
  
-    public int numeroPlazas;
+    private int numeroPlazas;
     
     //Constructor por defecto
     public autobus(){

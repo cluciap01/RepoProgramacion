@@ -5,15 +5,15 @@ package ejercicio23herencias;
  * @author alumno
  */
 public class vehiculos {
-    public String matricula;
-    public String modelo;
-    public int potenciaCV;
+    private String matricula;
+    private String modelo;
+    private int potenciaCV;
     
 //Constructor por defecto
 public vehiculos(){ 
     this.matricula="";
     this.modelo="";
-    this.potenciaCV=90;
+    this.potenciaCV=0;
 }
 
  public vehiculos(String matricula , String modelo , int potenciaCV){

@@ -20,7 +20,7 @@ public taxi(String matricula, String modelo , int potenciaCV , int licencia){
 }
     //GET Y SET
 public int getLicencia(){
-    return this.licencia=licencia;
+    return this.licencia;
 }
 
 public void setLicencia(int licencia){
