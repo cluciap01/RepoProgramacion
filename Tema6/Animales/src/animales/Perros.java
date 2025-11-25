@@ -16,7 +16,7 @@ public class Perros extends Canidos{
 
     @Override
     public void sonido(){
-        System.out.println("El perro ladra");
+        System.out.println("Los perros ladran");
     }
 
     @Override
