@@ -5,31 +5,35 @@ package animales;
  * @author alumno
  */
 public class Lobos extends Canidos{
+    
+    //Constructor por defecto    
     public Lobos (){
         super();
     }
     
+    //Constructor paramétrico    
     public Lobos(String nombre , int edad , double peso){
         super (nombre , edad , peso);
     }
 
+    //Implementacion de métodos
     @Override
-    public void sonido() {
-        System.out.println("Los lobos aullan");
+    public String sonido() {
+        return " aulla";
     }
 
     @Override
-    public void habitat() {
-        System.out.println("su hábitat es el bosque");
+    public String habitat() {
+        return " bosque";
     }
 
     @Override
-    public void alimentacion() {
-        System.out.println("su alimentación es carnívora");
+    public String alimentacion() {
+        return " carnívora"; 
     }
 
     @Override
-    public void nombreCientifico() {
-        System.out.println("su nombre científico es Canis lupus");
+    public String nombreCientifico() {
+        return " Canis lupus";
     }
 }

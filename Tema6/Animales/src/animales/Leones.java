@@ -5,32 +5,36 @@ package animales;
  * @author alumno
  */
 public class Leones extends Felinos{
+    
+    //Constructor por defecto
     public Leones(){
         super();
         
     }
     
+    //Constructor paramétrico    
     public Leones(String nombre , int edad , double peso){
         super (nombre , edad , peso);
     }
 
+    //Implementacion de métodos
     @Override
-    public void sonido() {
-        System.out.println("Los leones rugen");
+    public String sonido() {
+        return " ruge";
     }
 
     @Override
-    public void habitat() {
-        System.out.println("su hábitat es la sabana");
+    public String habitat() {
+        return " sabana";
     }
 
     @Override
-    public void alimentacion() {
-        System.out.println("su alimentación es carnívora");
+    public String alimentacion() {
+        return " carnívora"; 
     }
 
     @Override
-    public void nombreCientifico() {
-        System.out.println("su nombre científico es Panthera leo");
+    public String nombreCientifico() {
+        return " Panthera leo";
     }
 }

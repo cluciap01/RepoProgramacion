@@ -9,13 +9,14 @@ public abstract class Animales {
     private int edad;
     private double peso;
     
-    //Constructores
+    //Constructor por defecto
     public Animales(){
     this.nombre="";
     this.edad=0;
     this.peso=0.0;
     }
     
+    //Constructor paramétrico
     public Animales(String nombre, int edad, double peso){
         this.nombre=nombre;
         this.edad=edad;
@@ -23,37 +24,44 @@ public abstract class Animales {
     }
     
     //GETTERS Y SETTERS
-    public String getNombre(){
+    private String getNombre(){
         return this.nombre;
     }
     
-    public void setNombre(String nombre){
+    private void setNombre(String nombre){
         this.nombre=nombre;
     }
     
-    public double getPeso(){
+    private double getPeso(){
         return this.peso;
     }
     
-    public void setPeso(double peso){
+    private void setPeso(double peso){
         this.peso=peso;
     }
     
-    public int getEdad(){
+    private int getEdad(){
         return this.edad;
     }
     
-    public void setEdad(int edad){
+    private void setEdad(int edad){
         this.edad=edad;
     }
     
-    public abstract void sonido();
+    public abstract String sonido();
     
-    public abstract void habitat();
+    public abstract String habitat();
     
-    public abstract void alimentacion();
+    public abstract String alimentacion();
     
-    public abstract void nombreCientifico();    
+    public abstract String nombreCientifico();    
     
+    public void caracteristicas(){
+        System.out.println("--- " +this.nombre+ " (Edad: " +this.edad+ " años, Peso: " +this.peso+ " kg) ---");
+        System.out.println("Sonido: " +sonido());
+        System.out.println("Alimentación: " +alimentacion());
+        System.out.println("Hábitat: "+habitat());
+        System.out.println("Nombre científico: "+nombreCientifico());
+    }
 }
 

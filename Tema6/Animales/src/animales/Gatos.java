@@ -5,32 +5,36 @@ package animales;
  * @author alumno
  */
 public class Gatos extends Felinos{
+    
+    //Constructor por defecto
     public Gatos (){
         super();
         
     }
     
+    //Constructor paramétrico    
     public Gatos(String nombre , int edad , double peso){
         super (nombre , edad , peso);
     }
 
+    //Implementacion de métodos
     @Override
-    public void sonido() {
-        System.out.println("Los gatos maullan");
+    public String sonido() {
+        return " maulla";
     }
 
     @Override
-    public void habitat() {
-        System.out.println("su hábitat es doméstico");
+    public String habitat() {
+        return " doméstico";
     }
 
     @Override
-    public void alimentacion() {
-        System.out.println("se alimentan de ratones");
+    public String alimentacion() {
+        return " ratones";
     }
 
     @Override
-    public void nombreCientifico() {
-        System.out.println("su nombre científico es Felis silvestris catus");
+    public String nombreCientifico() {
+        return " Felis silvestris catus";
     }
 }
