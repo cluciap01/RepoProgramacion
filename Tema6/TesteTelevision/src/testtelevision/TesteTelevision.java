@@ -10,4 +10,8 @@ public class TesteTelevision {
         // TODO code application logic here
     }
     
+    @Override
+    public String toString(){
+        return "TEXTO";
+    }
 }
