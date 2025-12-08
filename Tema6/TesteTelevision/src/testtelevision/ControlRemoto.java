@@ -5,13 +5,13 @@ package testtelevision;
  * @author alumno
  */
 public interface ControlRemoto {
-    public abstract void apagar();
+    public void apagar();
     
-    public abstract void encender();
+    public void encender();
     
-    public abstract void bajarVolumen();
+    public void bajarVolumen();
     
-    public abstract void subirVolumen();
+    public void subirVolumen();
     
-    public abstract void cambiarCanal();
+    public void cambiarCanal(float canal);
 }

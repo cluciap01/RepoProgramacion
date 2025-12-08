@@ -22,45 +22,62 @@ public class Radio implements ControlRemoto{
         this.volumen=volumen;
 }
  //GETTERS Y SETTERS
-    private float getEmisora(){
+    public float getEmisora(){
         return this.emisora;
     }
     
-    private void setCanal(float emisora){
+    public void setCanal(float emisora){
         this.emisora=emisora;
     }
     
-    private int getVolumen(){
+    public int getVolumen(){
         return this.volumen;
     }
     
-    private void setVolumen(int volumen){
+    public void setVolumen(int volumen){
         this.volumen=volumen;
     }
     
+    public void mostrarInformacion() {
+        String estado = encendido ? "Encendida" : "Apagada";
+        System.out.println("Radio - Estado: " + estado + ", Emisora: " + emisora + ", Volumen: " + volumen);
+    }
+    
     @Override
-    public void apagar() {
-
+    public void encender() {
+        if (!encendido) {
+            encendido = true; // si la radio no está encendida, se encienda
+        }
     }
 
     @Override
-    public void encender() {
-        return ;
+    public void apagar() {
+        if (encendido) {
+            encendido = false; // si la radio está encendida, se apague
+        }
     }
 
     @Override
     public void bajarVolumen() {
-
+        if (encendido) {
+            volumen = Math.max(0, volumen - 5); // se decrementa en 5
+            System.out.println("Volumen actual: " + volumen);
+        }
     }
 
     @Override
     public void subirVolumen() {
-
+        if (encendido) {
+            volumen += 5; // se incrementa en 5
+            System.out.println("Volumen actual: " + volumen);
+        }
     }
 
     @Override
-    public void cambiarCanal() {
-
+    public void cambiarCanal(float nuevaEmisora) {
+        if (encendido) {
+            this.emisora = nuevaEmisora; // le asigna al atributo emisora el valor pasado por parámetro
+            System.out.println("Emisora cambiada a: " + this.emisora);
+        }
     }
-    
 }
