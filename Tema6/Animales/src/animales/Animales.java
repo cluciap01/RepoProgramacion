@@ -2,7 +2,7 @@ package animales;
 
 /**
  *
- * @author alumno
+ * @author Christian
  */
 public abstract class Animales {
     private String nombre;
