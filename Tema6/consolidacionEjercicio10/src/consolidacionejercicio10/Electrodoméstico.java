@@ -7,22 +7,19 @@ package consolidacionejercicio10;
 public class Electrodoméstico implements ConsumoEnergetico{
     private float kwh;
     private float preciokwh;
-    private float eficiencia;
-    private float consumo;
+    private String eficiencia;
 
     //Constructor por defecto
     public Electrodoméstico(){
         this.kwh = 0.0f;
         this.preciokwh = 0.0f;
-        this.eficiencia = 0.0f;
-        this.consumo = 0.0f;
+        this.eficiencia = "";
     }
     
-    public Electrodoméstico(float kwh , float preciokwh , float eficiencia , float consumo){
+    public Electrodoméstico(float kwh , float preciokwh , String eficiencia){
         this.kwh = kwh;
         this.preciokwh = preciokwh;
         this.eficiencia = eficiencia;
-        this.consumo = consumo;
     }
 
     //GETTERS Y SETTERS
@@ -43,31 +40,42 @@ public class Electrodoméstico implements ConsumoEnergetico{
         this.preciokwh = preciokwh;
     }
 
-    public float getEficiencia() {
+    public String getEficiencia() {
         return eficiencia;
     }
 
-    public void setEficiencia(float eficiencia) {
+    public void setEficiencia(String eficiencia) {
         this.eficiencia = eficiencia;
     }
 
-    public float getConsumo() {
-        return consumo;
-    }
 
-    public void setConsumo(float consumo) {
-        this.consumo = consumo;
+    private float obtenerEficacia(){
+        switch (eficiencia.toUpperCase()) {
+            case "A++":
+                return 0.5f;
+            case "A+":
+                return 0.7f;
+            case "A":
+                return 1f;
+            case "B":
+                return 1.2f;
+            default:
+                return 1.0f;
+        }
     }
-
-    
     @Override
     public float calcularConsumo(float horasDeUso) {
-        return consumo= horasDeUso * kwh * eficiencia ;
+        return horasDeUso * kwh * obtenerEficacia() ;
     }
 
     @Override
     public float calcularFactura(float horasDeUso) {
-        return consumo * preciokwh;
+        return calcularConsumo(horasDeUso) * preciokwh;
+    }
+
+    @Override
+    public String toString() {
+        return "";
     }
     
 }
