@@ -22,7 +22,7 @@ public class Ejercicio15MenuMesesArrays {
 
         do{
             System.out.println("========");
-            System.out.println("/nMENÚ");
+            System.out.println(" MENÚ ");
             System.out.println("========");
             System.out.println("1. Ventas aleatorias");
             System.out.println("2. Mostrar ventas");
