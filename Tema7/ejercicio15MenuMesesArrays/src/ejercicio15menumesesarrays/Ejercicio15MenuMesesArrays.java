@@ -46,11 +46,10 @@ public class Ejercicio15MenuMesesArrays {
                     mostrarVentasAlReves(ventas);
                     break;
                 case 4:
-                    System.out.println("La suma total del año es:");
+                    System.out.println("La suma total del año es:" + sumaVentas(ventas));
                     break;
                 case 5:
                     mostrarVentasMesesPares(ventas , meses);
-                    System.out.println("Las ventas totales en los meses pares es:");
                     break;
                 case 6:
                     mostrarMesMasVentas(ventas , meses);
@@ -58,12 +57,65 @@ public class Ejercicio15MenuMesesArrays {
                 case 7:
                     System.out.println("Saliendo del programa");
                     break;
+                default:
+                    System.out.println("Opción no válida.");
             }
         }while (opcion != 7);
     }
     
-    //Opción 1
-    
+    // Opción 1
+    public static void rellenarVentas(int[] ventas) {
+        for (int i = 0; i < ventas.length; i++) {
+            ventas[i] = (int)(Math.random() * 91) + 10; // entre 10 y 100
+        }
+    }
+
+    // Opción 2
+    public static void mostrarVentas(int[] ventas, String[] meses) {
+        for (int i = 0; i < ventas.length; i++) {
+            System.out.println(meses[i] + ": " + ventas[i]);
+        }
+    }
+
+    // Opción 3
+    public static void mostrarVentasAlReves(int[] ventas) {
+        for (int i = ventas.length - 1; i >= 0; i--) {
+            System.out.print(ventas[i] + " ");
+        }
+        System.out.println();
+    }
+
+    // Opción 4
+    public static int sumaVentas(int[] ventas) {
+        int suma = 0;
+        for (int v : ventas) {
+            suma += v;
+        }
+        return suma;
+    }
+
+    // Opción 5
+    public static void mostrarVentasMesesPares(int[] ventas, String[] meses) {
+        for (int i = 1; i < ventas.length; i += 2) {
+            System.out.println(meses[i] + ": " + ventas[i]);
+        }
+    }
+
+    // Opción 6
+    public static void mostrarMesMasVentas(int[] ventas, String[] meses) {
+        int mayor = ventas[0];
+        int posicion = 0;
+
+        for (int i = 1; i < ventas.length; i++) {
+            if (ventas[i] > mayor) {
+                mayor = ventas[i];
+                posicion = i;
+            }
+        }
+
+        System.out.println("El mes con más ventas es " + meses[posicion] +
+                           " con " + mayor + " ventas.");
+    }
     
     
     //Opción 2

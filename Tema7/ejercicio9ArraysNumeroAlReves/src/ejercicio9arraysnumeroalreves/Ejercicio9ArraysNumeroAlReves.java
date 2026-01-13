@@ -30,9 +30,9 @@ public class Ejercicio9ArraysNumeroAlReves {
         int contador = 0;
 
         do {
-            numero /= 10;
+            numero = numero / 10;
             contador++;
-        } while (numero != 0);
+        } while (numero > 0);
 
         return contador;
     }
@@ -43,7 +43,7 @@ public class Ejercicio9ArraysNumeroAlReves {
 
         for (int i = numCifras - 1; i >= 0; i--) {
             cifras[i] = numero % 10;
-            numero /= 10;
+            numero = numero / 10;
         }
 
         return cifras;
