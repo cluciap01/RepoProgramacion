@@ -116,30 +116,4 @@ public class Ejercicio15MenuMesesArrays {
         System.out.println("El mes con más ventas es " + meses[posicion] +
                            " con " + mayor + " ventas.");
     }
-    
-    
-    //Opción 2
-    
-    
-    
-    //Opción 3
-    
-    
-    
-    //Opción 4
-    
-    
-    
-    //Opción 5
-    
-    
-    
-    //Opción 6
-    
-    
-    
-    //Opción 7
-    
-    
-    
 }
