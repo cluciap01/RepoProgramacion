@@ -58,6 +58,7 @@ public class Ejercicio14Temperaturas {
         }while (opcion != 5);
     }
     
+    //Opcion1
     public static void rellenarTemperaturas(double[][] temperaturas, Scanner entrada) {
         for (int i = 0; i < temperaturas.length; i++) {
             System.out.println("Semana " + (i + 1));
@@ -67,7 +68,8 @@ public class Ejercicio14Temperaturas {
             }
         }
     }
-
+    
+    //Opcion2
     public static void mostrarTemperaturas(double[][] temperaturas , String[] dias){
         for (int i = 0; i < temperaturas.length; i++) {
             System.out.println("Semana " + (i + 1));
@@ -77,12 +79,43 @@ public class Ejercicio14Temperaturas {
         }
     }
     
+    //Opcion3
     public static double mediaMes(double [][] temperaturas){
-        return 0;
+        double suma = 0;
+        int contador = 0;
+
+        for (int i = 0; i < temperaturas.length; i++) {
+            for (int j = 0; j < temperaturas[i].length; j++) {
+                suma += temperaturas[i][j];
+                contador++;
+            }
+        }
+
+        return suma / contador;
     }
-        
+    
+    //Opcion4    
     public static void diasMasCalurosos(double[][] temperaturas , String[] dias){
-     
+        double max = temperaturas[0][0];
+
+        // Buscamos la temperatura máxima que hemos introducido
+        for (int i = 0; i < temperaturas.length; i++) {
+            for (int j = 0; j < temperaturas[i].length; j++) {
+                if (temperaturas[i][j] > max) {
+                    max = temperaturas[i][j];
+                }
+            }
+        }
+        
+        System.out.println("El día o días más calurosos fueron:");
+        for (int i = 0; i < temperaturas.length; i++) {
+            for (int j = 0; j < temperaturas[i].length; j++) {
+                if (temperaturas[i][j] == max) {
+                    System.out.println("El " + dias[j] + " de la Semana "
+                            + (i + 1) + " con " + max + " ºC.");
+                }
+            }
+        }
     }
              
 }
