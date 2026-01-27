@@ -10,34 +10,36 @@ public class Ejercicio19VectorNumerosAleatorios {
     /**
      * @param args the command line arguments
      */
-        public static void main(String[] args) {
-        // 1. Crear un vector de 100 posiciones según el enunciado [1]
-        int[] vector = new int[7]; 
+    public static void main(String[] args) {
+        // Creo un vector de 100 posiciones
+        int[] vector = new int[3];
         
         // Variables para cálculos
         int suma = 0;
-        int max = 9;  
-        int min = 81; 
+        int max = 9;  // Inicializado menor al rango (10-80)
+        int min = 81; // Inicializado mayor al rango (10-80)
         
-        // 2. Array de frecuencias (Moda)
-        // Debe ser de tamaño 81 para permitir el índice 80 [4]
-        int[] frecuencias = new int[8]; 
+        // Array de frecuencias para calcular el valor que más se repite (Moda)
+        // El rango es 10-80, usamos un array que cubra esos índices
+        int[] frecuencias = new int[4]; 
 
-        // 3. Rellenar y procesar datos en un solo bucle [9]
+        // Rellenar con números aleatorios entre 10 y 80 utilizando bucles
         for (int i = 0; i < vector.length; i++) {
-            // Aleatorios entre 10 y 80 [5]
+
             vector[i] = (int) (Math.random() * 71) + 10;
             
+            // Acumulo para la media
             suma += vector[i];
             
+            // Determinar mayor y menor
             if (vector[i] > max) max = vector[i];
             if (vector[i] < min) min = vector[i];
             
-            // Incrementa la frecuencia del número generado
+            // Contar para el valor más repetido
             frecuencias[vector[i]]++;
         }
 
-        // 4. Calcular el valor que más se repite (Moda)
+        // Calcular el valor que más se repite
         int valorMasRepetido = 10;
         int maxFrecuencia = 0;
         for (int i = 10; i <= 80; i++) {
@@ -47,16 +49,14 @@ public class Ejercicio19VectorNumerosAleatorios {
             }
         }
 
-        // 5. Calcular la media aritmética
+        // Calcular la media
         double media = (double) suma / vector.length;
 
-        // 6. Mostrar resultados por pantalla [1]
+        // Mostrar resultados por pantalla
         System.out.println(" Estadísticas del Vector de 100 elementos ");
-        System.out.println("-------------------------------------------");
         System.out.println("El número mayor es: " + max);
         System.out.println("El número menor es: " + min);
         System.out.println("La media aritmética es: " + media);
-        System.out.println("El valor que más se repite es: " + valorMasRepetido + 
-                           " (aparece " + maxFrecuencia + " veces)");
+        System.out.println("El valor que más se repite es: " + valorMasRepetido + " (aparece " + maxFrecuencia + " veces)");
     }
 }
