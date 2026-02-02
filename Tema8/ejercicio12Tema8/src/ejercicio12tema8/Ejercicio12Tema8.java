@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 /**
  *
- * @author alumno
+ * @author Christian
  */
 public class Ejercicio12Tema8 {
 
