@@ -11,7 +11,7 @@ public class ExamenArrays {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         Coche[] garaje = new Coche[5];
-        int opcion = 0;
+        int opcion;
 
         do {
             System.out.println(" MENÚ GARAJE: ");
@@ -23,7 +23,8 @@ public class ExamenArrays {
             System.out.println("6. Estado de las plazas");
             System.out.println("7. Salir");
             System.out.print("Seleccione una opción: ");
-                        
+            
+            opcion = entrada.nextInt();
             entrada.nextLine(); // Limpiar búfer
 
             switch (opcion) {
