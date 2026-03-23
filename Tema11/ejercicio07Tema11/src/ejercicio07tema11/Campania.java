@@ -15,8 +15,21 @@ public class Campania {
         this.listaDonaciones = new ArrayList<>();
     }
 
-    public String getNombreCampania() { return nombreCampania; }
-    public ArrayList<Donacion> getListaDonaciones() { return listaDonaciones; }
+    public ArrayList<Donacion> getListaDonaciones() {
+        return listaDonaciones;
+    }
+
+    public void setListaDonaciones(ArrayList<Donacion> listaDonaciones) {
+        this.listaDonaciones = listaDonaciones;
+    }
+
+    public String getNombreCampania() {
+        return nombreCampania;
+    }
+
+    public void setNombreCampania(String nombreCampania) {
+        this.nombreCampania = nombreCampania;
+    }
 
     public void añadirDonacion(Donacion d) {
         listaDonaciones.add(d);
