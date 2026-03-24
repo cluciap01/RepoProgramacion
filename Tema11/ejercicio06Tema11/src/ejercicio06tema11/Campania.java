@@ -1,6 +1,8 @@
 package ejercicio06tema11;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  *
@@ -9,6 +11,7 @@ import java.util.ArrayList;
 public class Campania {
     private String nombreCampania;
     private ArrayList<Donacion> listaDonaciones;
+    //Set<String> listaDonacionesLinkedHashSet = new LinkedHashSet<>();
 
     public Campania(String nombreCampania) {
         this.nombreCampania = nombreCampania;
