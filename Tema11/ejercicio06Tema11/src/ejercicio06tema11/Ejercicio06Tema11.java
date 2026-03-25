@@ -36,7 +36,7 @@ public class Ejercicio06Tema11 {
                     String nombre = entrada.nextLine();
                     System.out.print("Cantidad: ");
                     double cant = entrada.nextDouble();
-                    campaña.añadirDonacionOrdenada(new Donacion(nombre, cant));
+                    campaña.aniadirDonacionOrdenada(new Donacion(nombre, cant));
                     System.out.println("Donación añadida con éxito.");
                 }
                 case 2 -> campaña.mostrarDonaciones();

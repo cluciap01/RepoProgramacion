@@ -34,7 +34,7 @@ public class Campania {
         this.nombreCampania = nombreCampania;
     }
     
-    public void añadirDonacionOrdenada(Donacion nueva) {
+    public void aniadirDonacionOrdenada(Donacion nueva) {
         int i = 0;
         while (i < listaDonaciones.size() && listaDonaciones.get(i).getCantidad() > nueva.getCantidad()) {
             i++;
