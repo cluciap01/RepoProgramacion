@@ -14,7 +14,7 @@ public class Ejercicio06Tema11 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         System.out.print("Introduzca el nombre de la campaña: ");
-        Campania campaña = new Campania(entrada.nextLine());
+        Campania campana = new Campania(entrada.nextLine());
         
         int opcion;
         do {
@@ -36,19 +36,19 @@ public class Ejercicio06Tema11 {
                     String nombre = entrada.nextLine();
                     System.out.print("Cantidad: ");
                     double cant = entrada.nextDouble();
-                    campaña.aniadirDonacionOrdenada(new Donacion(nombre, cant));
+                    campana.aniadirDonacionOrdenada(new Donacion(nombre, cant));
                     System.out.println("Donación añadida con éxito.");
                 }
-                case 2 -> campaña.mostrarDonaciones();
+                case 2 -> campana.mostrarDonaciones();
                 case 3 -> {
                     System.out.print("Nombre a buscar: ");
-                    campaña.mostrarPorNombre(entrada.nextLine());
+                    campana.mostrarPorNombre(entrada.nextLine());
                 }
-                case 4 -> System.out.println("Total donaciones: " + campaña.obtenerNumeroDonaciones());
-                case 5 -> System.out.println("Dinero total recaudado: " + campaña.calcularTotalRecaudado() + "€");
+                case 4 -> System.out.println("Total donaciones: " + campana.obtenerNumeroDonaciones());
+                case 5 -> System.out.println("Dinero total recaudado: " + campana.calcularTotalRecaudado() + "€");
                 case 6 -> {
                     System.out.println("Las donaciones se encuentran ordenadas de mayor a menor:");
-                    campaña.mostrarDonaciones();
+                    campana.mostrarDonaciones();
                 }
                 case 7 -> System.out.println("Saliendo del programa...");
                 default -> System.out.println("Opción errónea. Pruebe entre 1 y 7.");
