@@ -1,7 +1,8 @@
 package ejercicio11tema11;
 
 import java.util.Scanner;
-import java.util.TreeMap;
+import java.util.*;
+
 
 /**
  *
@@ -14,7 +15,7 @@ public class Ejercicio11Tema11 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in); 
-        TreeMap<Alumno> gestionAlumnos = new TreeMap<>();        
+        Set<Alumno> gestionAlumnos = new TreeSet<>();
         int opcion;
 
         do {
@@ -37,7 +38,24 @@ public class Ejercicio11Tema11 {
             }
         } while (opcion != 5);
     }
+    
     //MÉTODO PARA AÑADIR ALUMNO
+    public void añadirAlumno(){
+        return ;
+    }
     
+    //MÉTODO PARA MOSTRAR ALUMNOS
+    public void mostrarAlumnos(){
+        return;
+    }
     
+    //MÉTODO PARA BUSCAR NUMERO DE EXPEDIENTE
+    public void buscarNumeroExpediente(){
+    return;
+    }
+    
+    //MÉTODO PARA BUSCAR POR NOTA MEDIA
+    public void buscarPorNota(){
+        return;
+    }        
 }
