@@ -5,28 +5,32 @@ package ejercicio8tema11;
  * @author alumno
  */
 public class Sede {
-    private float ingresosAnuales;
-    private String nombreSede;
+    private double ingresosAnuales;
+    private String nombre;
     
-    public Sede(float ingresosAnuales, String nombreSede){
+    public Sede(double ingresosAnuales, String nombre){
         this.ingresosAnuales=ingresosAnuales;
-        this.nombreSede=nombreSede;
+        this.nombre=nombre;
     }
 
-    public float getIngresosAnuales() {
+    public double getIngresosAnuales() {
         return ingresosAnuales;
     }
 
-    public void setIngresosAnuales(float ingresosAnuales) {
+    public void setIngresosAnuales(double ingresosAnuales) {
         this.ingresosAnuales = ingresosAnuales;
     }
 
-    public String getNombreSede() {
-        return nombreSede;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombreSede(String nombreSede) {
-        this.nombreSede = nombreSede;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
+    @Override
+    public String toString() {
+        return "Sede: " + nombre + " | Ingresos: " + ingresosAnuales + "€";
+    }
 }
