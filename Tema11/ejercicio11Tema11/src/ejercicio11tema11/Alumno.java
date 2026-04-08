@@ -5,7 +5,7 @@ package ejercicio11tema11;
  * @author alumno
  */
 public class Alumno {
-    private String dni;
+    private String dni; 
     private int numeroexpediente;
     private float notamedia;
     
