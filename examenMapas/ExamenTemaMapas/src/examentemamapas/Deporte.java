@@ -74,5 +74,46 @@ public class Deporte {
         } while(pedirSeguir().equalsIgnoreCase("S"));
     }
     
+    public void mostrarEquipos(){
+        cEquipos.forEach(System.out::println);
+    } 
     
+    public boolean buscarEquipoPorNombre(String nombre){
+    Iterator<Equipo> it = cEquipos.iterator();
+    Equipo aux;
+    boolean enc = false;
+    
+    while(it.hasNext() && !enc){
+        aux = it.next();
+        
+        if(aux.getNombre().equalsIgnoreCase(nombre)){
+            enc = true;
+        }
+    }
+    return enc;
+    }
+    
+    public Map<Integer, Equipo> pasarEquiposAMapa(){
+        Map<Integer, Equipo> mEquipo = new TreeMap<>();
+        for (Equipo equipo : cEquipos){
+            mEquipo.put(equipo.getCodigo(), equipo);
+        }
+            return mEquipo;
+        }
+    
+    public void mostrarEquipoConMasTrofeos(Map<Integer, Equipo> mEquipos, int cantidadTrofeosFiltro){
+        Iterator <Integer> it = mEquipos.keySet().iterator();
+        Equipo aux = null;
+        Integer clave;
+        int numTrofeos = 99999;
+        
+        while (it.hasNext()){
+            clave = it.next();
+            aux = mEquipos.get(clave);
+            numTrofeos = aux.getTrofeos();  
+        if(numTrofeos >= cantidadTrofeosFiltro){
+            System.out.println("");
+        }
+        }
+    }
 }
