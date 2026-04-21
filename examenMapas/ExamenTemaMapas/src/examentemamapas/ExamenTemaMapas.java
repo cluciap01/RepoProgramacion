@@ -1,14 +1,18 @@
 package examentemamapas;
 
+import java.util.Scanner;
+
 /**
  *
  * @author alumno
  */
 public class ExamenTemaMapas {
-
-    /**
-     * @param args the command line arguments
-     */
+    private static String pedirNombre(){
+        Scanner entrada = new Scanner (System.in);
+        System.out.println("Nombre: ");
+        return entrada.nextLine();
+    }
+    
     public static void main(String[] args) {
         
     }
