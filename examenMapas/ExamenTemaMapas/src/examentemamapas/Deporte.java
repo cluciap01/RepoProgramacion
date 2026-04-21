@@ -101,7 +101,7 @@ public class Deporte {
             return mEquipo;
         }
     
-    public void mostrarEquipoConMasTrofeos(Map<Integer, Equipo> mEquipos, int cantidadTrofeosFiltro){
+    public void mostrarEquiposConMasTrofeos(Map<Integer, Equipo> mEquipos, int cantidadTrofeosFiltro){
         Iterator <Integer> it = mEquipos.keySet().iterator();
         Equipo aux = null;
         Integer clave;
@@ -111,9 +111,20 @@ public class Deporte {
             clave = it.next();
             aux = mEquipos.get(clave);
             numTrofeos = aux.getTrofeos();  
-        if(numTrofeos >= cantidadTrofeosFiltro){
-            System.out.println("");
+            if(numTrofeos >= cantidadTrofeosFiltro){
+                System.out.println(aux);
+            }
         }
-        }
+    }
+    
+    public void mostrarEquiposOrdenadosPorTrofeos(){
+        ArrayList<Equipo> lEquipos = new ArrayList<>(cEquipos);
+        Collections.sort(lEquipos);
+        lEquipos.forEach(System.out::println);
+    }
+    
+    @Override
+    public String toString(){
+        return nombre+ " Equipos: " +cEquipos;
     }
 }
